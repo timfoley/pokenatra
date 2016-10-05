@@ -3,6 +3,7 @@ source "https://rubygems.org"
 
 gem 'ffaker'
 gem "pry"
+gem "haml"
 gem "activerecord"
 gem "pg"
 gem "sinatra"

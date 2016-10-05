@@ -1,6 +1,7 @@
 require 'pg'
 require 'active_record'
 require 'pry'
+require 'haml'
 
 ActiveRecord::Base.establish_connection(
   :adapter => "postgresql",
