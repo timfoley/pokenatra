@@ -1,0 +1,14 @@
+%h2 Edit Trainer:
+
+%form{action: "/trainers/#{@trainer.id}", method: "post"}
+  %input{type: "hidden", name: "_method", value: "put"}
+  %label Name:
+  %input{name: "trainer[name]", value: "#{@trainer.name}"}
+
+  %label Level:
+  %input{name: "trainer[level]", value: "#{@trainer.level}"}
+
+  %label Image URL:
+  %input{name: "trainer[img_url]", value: "#{@trainer.img_url}"}
+
+  %input{type: "submit", value: "Save"}

@@ -1,0 +1,13 @@
+%h2 Add Trainer:
+
+%form{action: "/trainers", method: "post"}
+  %label Name:
+  %input{name: "trainer[name]"}
+
+  %label Level:
+  %input{name: "trainer[level]"}
+
+  %label Image URL:
+  %input{name: "trainer[img_url]"}
+
+  %input{type: "submit", value: "Create"}

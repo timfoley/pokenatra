@@ -1,0 +1,14 @@
+.trainer
+  %h2=@trainer.name
+  %p
+    %em
+      %a{href: "/trainers/#{@trainer.id}/edit"} edit
+  %img(src='#{@trainer.img_url}')
+  %ul.stats
+    %li Name: #{@trainer.name}
+    %li Level: #{@trainer.level}
+    %li Pokemon:
+
+  %nav.mini-nav
+    %a(href='/trainers/#{@trainer.id - 1}') Previous
+    %a(href='/trainers/#{@trainer.id + 1}') Next

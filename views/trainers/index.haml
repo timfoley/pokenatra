@@ -1,0 +1,5 @@
+%h2 Trainers:
+%ul.trainers
+  - @trainers.each do |trainer|
+    %li
+      %a{href: "/trainers/#{trainer.id}"}= trainer.name

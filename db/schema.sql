@@ -14,5 +14,5 @@ CREATE TABLE trainers (
   id SERIAL PRIMARY KEY,
   name VARCHAR,
   level INTEGER,
-  img_url INTEGER
+  img_url TEXT
 );
