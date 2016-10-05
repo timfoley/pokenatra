@@ -1,0 +1,16 @@
+%h2 Add Pokemon:
+
+%form{action: "/pokemon", method: "post"}
+  %label Name:
+  %input{name: "pokemon[name]"}
+
+  %label Type:
+  %input{name: "pokemon[poke_type]"}
+
+  %label CP:
+  %input{name: "pokemon[cp]"}
+
+  %label Image URL:
+  %input{name: "pokemon[img_url]"}
+
+  %input{type: "submit", value: "Create"}
