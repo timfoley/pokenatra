@@ -1,0 +1,17 @@
+%h2 Edit Pokemon:
+
+%form{action: "/pokemon/#{@pokemon.id}", method: "post"}
+  %input{type: "hidden", name: "_method", value: "put"}
+  %label Name:
+  %input{name: "pokemon[name]", value: "#{@pokemon.name}"}
+
+  %label Type:
+  %input{name: "pokemon[poke_type]", value: "#{@pokemon.poke_type}"}
+
+  %label CP:
+  %input{name: "pokemon[cp]", value: "#{@pokemon.cp}"}
+
+  %label Image URL:
+  %input{name: "pokemon[img_url]", value: "#{@pokemon.img_url}"}
+
+  %input{type: "submit", value: "Save"}

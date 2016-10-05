@@ -32,6 +32,17 @@ get '/pokemon/:id' do
   haml :'pokemon/show'
 end
 
+get '/pokemon/:id/edit' do
+  @pokemon = Pokemon.find(params[:id])
+  haml :'pokemon/edit'
+end
+
+put '/pokemon/:id' do
+  @pokemon = Pokemon.find(params[:id])
+  @pokemon.update(params[:pokemon])
+  redirect "/pokemon/#{@pokemon.id}"
+end
+
 get '/trainers' do
   @trainers = Trainer.all
   haml :"trainers/index"
@@ -57,9 +68,7 @@ get '/trainers/:id/edit' do
 end
 
 put '/trainers/:id' do
-  puts params[:trainer]
   @trainer = Trainer.find(params[:id])
-  p @trainer
   @trainer.update(params[:trainer])
   redirect "/trainers/#{@trainer.id}"
 end
