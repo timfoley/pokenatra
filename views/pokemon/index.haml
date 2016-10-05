@@ -1,0 +1,5 @@
+%h2 Pokemon:
+%ul#pokemon
+  - @pokemons.each do |pokemon|
+    %li
+      %a{href: "/pokemon/#{pokemon.id}"}= pokemon.name

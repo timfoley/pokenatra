@@ -1,0 +1,9 @@
+.pokemon
+  %h2=@pokemon.name
+  %ul.stats
+    %li Type: #{@pokemon.poke_type}
+    %li CP: #{@pokemon.cp}
+    %img(src='#{@pokemon.img_url}')
+  %nav.mini-nav
+    %a(href='/pokemon/#{@pokemon.id - 1}') Previous
+    %a(href='/pokemon/#{@pokemon.id + 1}') Next

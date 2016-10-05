@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title POKENATRA
+    -# %link{rel: "stylesheet", type: "text/css", href: "/css/pokestyle.css"}
+  %body
+    %header
+      %h1 POKENATRA
+      %h2 A Sinatra-based pokedex... sorta
+      %nav
+        %ul
+          %li
+            %a{href: '/pokemon'} View Pokemon
+          %li
+            %a{href: '/trainers'} View Trainers
+          %li
+            %a{href: '/pokemon/new'} Add Pokemon
+          %li
+            %a{href: '/trainers/add'} Add Trainer
+    =yield
